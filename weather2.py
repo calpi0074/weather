@@ -30,7 +30,7 @@ if data['response']['header']['resultCode'] == "00":
         if 'obsrValue' in item:
             if category in ['PTY', 'RN1', 'UUU', 'VVV', 'VEC', 'WSD', 'LGT']:
                 weather_data[category] = item['fcstValue']
-    print("PTY (날씨 형태):", weather_data.get('PTY'), "(0은 강수 없음, 1은 비, 2는 비/눈, 3은 눈, 4는 소나기)")
+    print("PTY (강수 형태):", weather_data.get('PTY'), "(0은 강수 없음, 1은 비, 2는 비/눈, 3은 눈, 5는 빗방울, 6는 빗방울눈날림 , 7은 눈날림)")
     print("RN1 (1시간 강수량):", weather_data.get('RN1'))
     print("UUU (동서 바람 성분):", weather_data.get('UUU'), "m/s")
     print("VVV (남북 바람 성분):", weather_data.get('VVV'), "m/s")
